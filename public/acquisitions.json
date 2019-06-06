@@ -1,0 +1,32 @@
+{
+    "username": "Vijaya Kiran",
+    "companies": [{
+      "id":1,
+      "name": "ABCD",
+      "description": "asdf asdf",
+      "keycontacts": "asdf 123",
+      "financialperformance": "90%",
+      "status":1
+      },{
+        "id":2,
+        "name": "EFG",
+        "description": "asdf asdf",
+         "keycontacts": "asdf 123",
+        "financialperformance": "80%",
+        "status":2
+      },{
+        "id":3,
+        "name": "HIJ",
+        "description": "asdf asdf",
+         "keycontacts": "asdf 123",
+        "financialperformance": "88%",
+        "status":3
+      },{
+        "id":4,
+        "name": "KLM",
+        "description": "asdf asdf",
+         "keycontacts": "asdf 123",
+        "financialperformance": "90%",
+        "status":4
+      }]
+  }
