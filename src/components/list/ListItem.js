@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import CommonButton from '../button/CommonButton';
+import CommonButton from '../common/button/CommonButton';
+import {statusOptions} from '../../utils';
 
 class ListItem extends Component {
     constructor (props) {
@@ -23,8 +24,8 @@ class ListItem extends Component {
                 <section className="user-name">
                     {data.financialperformance}
                 </section>
-                <section className="user-email">
-                    {data.status}
+                <section className="user-name">
+                    {statusOptions[data.status - 1].label}
                 </section>
                 <section className="edit">
                     <Link

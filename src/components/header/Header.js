@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import Nav from './Nav';
-import CommonButton from '../button/CommonButton';
+import CommonButton from '../common/button/CommonButton';
 import { withRouter } from 'react-router-dom';
 
 class Header extends Component {

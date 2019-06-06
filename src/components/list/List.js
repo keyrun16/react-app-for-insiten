@@ -54,7 +54,7 @@ class List extends Component {
                             <section className="user-name">
                                 Financial Performance
                             </section>
-                            <section className="user-email">
+                            <section className="user-name">
                                 Status
                             </section>
                             <section className="edit" />
@@ -110,8 +110,7 @@ const Wrapper = styled.section`
             }            
         }        
     }
-    .user-name,
-    .user-email {
+    .user-name {
         display: inline-block;
         padding: 5px 15px;
         width: 30%;

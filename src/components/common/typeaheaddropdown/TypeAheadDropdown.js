@@ -2,13 +2,7 @@ import React from 'react';
 import { FormGroup } from 'react-bootstrap';
 import styled from 'styled-components';
 import Select from 'react-select';
- 
-const options = [
-  { value: '1', label: 'Researching' },
-  { value: '2', label: 'Pending approval' },
-  { value: '3', label: 'Approved' },
-  { value: '4', label: 'Declined' }
-];
+import {statusOptions} from '../../../utils';
  
 class TypeAheadDropdown extends React.Component {
     constructor(props){
@@ -33,8 +27,8 @@ class TypeAheadDropdown extends React.Component {
             <Select
                 value={selectedOption}
                 onChange={this.handleChange}
-                options={options}                
-				placeholder={options[selectedOption - 1].label}
+                options={statusOptions}                
+				placeholder={statusOptions[selectedOption - 1].label}
             />
         </StyledFormGroup>      
     );

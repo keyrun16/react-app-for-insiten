@@ -5,6 +5,7 @@ import TextInput from '../common/textInput/TextInput';
 import Header from '../header/Header';
 import CommonButton from '../button/CommonButton';
 import TypeAheadDropdown from '../common/typeaheaddropdown/TypeAheadDropdown';
+import { withRouter } from 'react-router-dom';
 
 class Add extends Component {
     constructor (props) {
@@ -14,7 +15,15 @@ class Add extends Component {
             companyInfo: props.location && props.location.state ? props.location.state.data : {},
             userName: queryString.parse(props.location.search).username
         };
+        this.handleCancel = this.handleCancel.bind(this);
     }
+
+    handleCancel () {
+        this.props.history.push({
+            pathname: `/`
+        });
+    }
+
     render () {
         const { companyID, companyInfo, userName } = this.state;
         let title = companyID > 0 ? 'Edit company' : 'Add newly acquired company';
@@ -58,15 +67,15 @@ class Add extends Component {
                     <TypeAheadDropdown label="Status" value={companyInfo.status} />
                 </section>
                 <Footer className="footer">
-                    <CommonButton label="Save" handleClick={this.handleSave} styleName="primary" />
-                    <CommonButton label="Cancel" handleClick={this.handleSave} styleName="secondary" />
+                    <CommonButton label="Save" handleClick={this.handleCancel} styleName="primary" />
+                    <CommonButton label="Cancel" handleClick={this.handleCancel} styleName="secondary" />
                 </Footer>
             </Wrapper>
         );
     }
 }
 
-export default Add;
+export default withRouter(Add);
 
 const Wrapper = styled.section`
     .form_fields_wrapper{
