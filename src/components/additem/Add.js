@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import TextInput from '../common/textInput/TextInput';
 import Header from '../header/Header';
 import CommonButton from '../button/CommonButton';
+import TypeAheadDropdown from '../common/typeaheaddropdown/TypeAheadDropdown';
 
 class Add extends Component {
     constructor (props) {
@@ -54,6 +55,7 @@ class Add extends Component {
                         value={companyInfo.status || 0}
                         label="Status"
                     />
+                    <TypeAheadDropdown label="Status" value={companyInfo.status} />
                 </section>
                 <Footer className="footer">
                     <CommonButton label="Save" handleClick={this.handleSave} styleName="primary" />
