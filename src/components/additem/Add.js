@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import queryString from 'query-string';
 import TextInput from '../common/textInput/TextInput';
 import Header from '../header/Header';
-import CommonButton from '../button/CommonButton';
+import CommonButton from '../common/button/CommonButton';
 import TypeAheadDropdown from '../common/typeaheaddropdown/TypeAheadDropdown';
 import { withRouter } from 'react-router-dom';
 
